@@ -1,0 +1,193 @@
+:root {
+	--main-bg-color: white;
+	--main-text-color: black;
+	--main-ul-bg-color: black;
+	--main-li-colour: white;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	background-color: var(--main-bg-color);
+}
+section {
+	width: 100%;
+	padding-top: 10px;
+	
+}
+.article-heading {
+	display: flex;
+	align-items: center;
+	height: auto;
+	background-color: gainsboro;
+}
+article {
+	text-align: center;
+	line-height: 1;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: 5fr 8fr;
+    height: 100px;
+	padding: 0 10px 10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+	
+}
+p {
+	
+}
+h1 {
+
+}
+h2 {
+	padding: 0px 5px;
+	font-size: 20px;
+	text-align: center;
+}
+.logo {
+	cursor: default;
+	text-align: center;
+	margin: inherit;
+	padding: 20px 0;
+}
+ul {
+	margin: 0 10px;;
+	padding: inherit;
+	align-items: center;
+	max-width: 960px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	background-color: (--main-ul-bg-color)
+}
+li {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+li:hover {
+	opacity: 0.3;
+	transition: 1s;
+}
+.one {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.two {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.three {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.four {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.five {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.six {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.seven {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.eight {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.nine {
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+@media only screen and (min-width: 700px) {
+	h2 {
+		text-align: left;
+		margin: 0;
+		padding: 2px 0 2px 5px;
+	}
+	ul {
+		margin: 0 10px;;
+	}
+	.article-heading {
+		display: flex;
+	}
+	section {
+		padding: 0;
+		overflow: hidden;
+		display: grid;
+        grid-template-rows: repeat(4, minmax(70px, 150px));
+        grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 15px;
+		grid-row-gap: 15px;
+        max-width: 960px;
+        margin: 0;
+    }
+    article {
+		margin-bottom: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
+		height: auto;
+    }
+    article:nth-child(1) {
+        grid-row: 1/3;
+        grid-column: 1 / span 2;
+    }
+    article:nth-child(2) {
+        grid-row: 1;
+    }
+    article:nth-child(3) {
+        grid-column: 3;
+        grid-row: 2/4;
+        grid-template-columns: 1fr;
+    }
+    article:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3/5
+    }
+    article:nth-child(6) {
+        grid-column: 2/4;
+        grid-row: 4;
+    }
+	.logo {
+		margin: 5px 10px;
+		padding: 0;
+		font-size: 24px;
+		text-align: left;
+	}
+	header {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: inherit;
+	}
+}
+@media only screen and (min-width: 960px) {
+	ul {
+		margin: auto;
+	}
+	section {
+		margin: auto;
+		padding: 0;
+	}
+	.logo {
+		margin: 5px 0;
+	}
+}
