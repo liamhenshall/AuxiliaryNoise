@@ -1,16 +1,29 @@
 :root {
-	--main-bg-color: white;
+	--main-bg-color: #FBFBFB;
 	--main-text-color: black;
 	--main-ul-bg-color: black;
 	--main-li-colour: white;
 }
-
 body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
 	background-color: var(--main-bg-color);
+	font-size: 18px;
+	}
+.wrap {
+	display: flex;
+	align-items: center;
 }
+header {
+	background-color: #333;
+	color: 000;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+}
+	/* LAYOUT */
 section {
 	width: 100%;
 	padding-top: 10px;
@@ -19,8 +32,7 @@ section {
 .article-heading {
 	display: flex;
 	align-items: center;
-	height: auto;
-	background-color: gainsboro;
+	background-color: #D3D5D4;
 }
 article {
 	text-align: center;
@@ -36,44 +48,80 @@ a {
 	color: black;
 	
 }
+li a {
+	color: #FBFBFB;
+}
 p {
-	
+	margin: 0;
+	padding: 0;
 }
 h1 {
 
 }
 h2 {
 	padding: 0px 5px;
-	font-size: 20px;
+	margin: auto;
 	text-align: center;
+	font-size: 1em;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+	color: #333333;
+}
+/*.article-type {
+	width: auto;
+	display: inline-block;
+	padding: 5px;
+	right: 0;
+	
+	background-color: black;
+	color: white;
+	font-size: 1.44em;
+}
+.type {
+	display: block;
+	margin: auto;
+	
+	text-align: center;
+	width: auto;
+	
+}*/
+.icon {
+	border-radius: 250px;
+	height: 40px;
+	margin: 10px 0;
 }
 .logo {
+	color: 000;
 	cursor: default;
-	text-align: center;
-	margin: inherit;
-	padding: 20px 0;
+	height: 2.2em;
+	fill: #FBFBFB;
+	width: 240px;
 }
 ul {
-	margin: 0 10px;;
-	padding: inherit;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 	align-items: center;
-	max-width: 960px;
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
-	background-color: (--main-ul-bg-color)
+	background-color: #333;
+	text-transform: uppercase;
+
 }
 li {
 	text-align: center;
-	padding: 0;
-	margin: 0;
+	font-weight: 500;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	padding: 0 10px;
 }
 li:hover {
 	opacity: 0.3;
 	transition: 1s;
 }
 .one {
-	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band1.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -83,7 +131,7 @@ li:hover {
 	background-size: cover;
 }
 .three {
-	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band2.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -93,12 +141,12 @@ li:hover {
 	background-size: cover;
 }
 .five {
-	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band1.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .six {
-	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band.jpg);
+	background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(/img/band2.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -117,18 +165,24 @@ li:hover {
 	background-position: center;
 	background-size: cover;
 }
-
+footer {
+	background-color: #333333;
+}
 @media only screen and (min-width: 700px) {
 	h2 {
-		text-align: left;
-		margin: 0;
-		padding: 2px 0 2px 5px;
+		margin: auto;
+		font-size: 1.2em;
 	}
 	ul {
-		margin: 0 10px;;
+		margin: 0 auto;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	li {
+		margin: 0 0 0 20px;
 	}
 	.article-heading {
-		display: flex;
+		min-height: 55px;
 	}
 	section {
 		padding: 0;
@@ -139,9 +193,10 @@ li:hover {
 		grid-column-gap: 15px;
 		grid-row-gap: 15px;
         max-width: 960px;
-        margin: 0;
+        margin: 15px auto;
     }
     article {
+		padding: 0;
 		margin-bottom: 0;
         grid-template-columns: 1fr;
         grid-template-rows: 5fr 1fr;
@@ -167,27 +222,19 @@ li:hover {
         grid-column: 2/4;
         grid-row: 4;
     }
-	.logo {
-		margin: 5px 10px;
-		padding: 0;
-		font-size: 24px;
-		text-align: left;
-	}
 	header {
-		max-width: 960px;
 		margin: 0 auto;
-		padding: inherit;
+		padding-left: 10px;
+		display: flex;
+		align-self: center;
 	}
 }
-@media only screen and (min-width: 960px) {
-	ul {
-		margin: auto;
-	}
+/*@media only screen and (min-width: 960px) {
 	section {
-		margin: auto;
+		margin: 15px auto 0;
 		padding: 0;
 	}
-	.logo {
-		margin: 5px 0;
+	ul {
+		max-width: 960px;
 	}
-}
+}/*
