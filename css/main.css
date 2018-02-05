@@ -26,10 +26,9 @@ html {
  p {
      margin: 0;
      padding: 0;
-     font-family: var(--h-font);
+     font-family: arial;
      line-height: 2;
 	 color: var(--dark);
-	 font-weight: 300;
 }
  a {
      text-decoration: none;
@@ -138,14 +137,14 @@ html {
 	 padding: 0 20px;
 }
  .article-parent p:nth-of-type(1) {
-	 font-weight: 400;
+	 font-weight: bold;
 	 margin: 10px 0 20px 0;
 }
 .album-review-child:nth-of-type(2) p:nth-of-type(1) {
-	font-weight: 400;
+	font-weight: bold;
 }
 	 .album-review-child p {
-		 margin: 20px 40px;
+		 margin: 20px 25px;
 	 }
 .article-parent p:nth-of-type(2)::first-letter {
 	
@@ -383,6 +382,9 @@ text-align: left;
 }
 	 .album-review-child p:nth-of-type(1)  {
 		 margin-top: 50px;
+	 } 
+	 .album-review-child:nth-of-type(2)  {
+		 max-width: 620px;
 		 
 	 }
 	 .article-parent {
