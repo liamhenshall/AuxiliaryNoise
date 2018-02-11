@@ -1,21 +1,17 @@
- 
  :root {
      --white: #FBFBFB;
-	 --dark: #333333;
+     --dark: #333333;
      --grey: #D3D5D4;
-	/* --pink: rgba(221, 10, 127, 0.6);
-	 --purple: rgba(144, 37, 120, 0.7); */
-	 --h-font: 'Oswald', sans-serif;
-	 --p-font: 'Fira Sans', sans-serif;
+    /* --pink: rgba(221, 10, 127, 0.6);
+     --purple: rgba(144, 37, 120, 0.7);
+     */
+     --h-font: 'Oswald', sans-serif;
+     --p-font: 'arial', sans-serif;
 }
 /* GLOBAL */
-html {
-	 
-     padding: 0;
-}
  body {
-	 margin: 0;
-	 width: 100%;
+     margin: 0;
+     width: 100%;
      line-height: 1.5;
      background-color: var(--white);
      font-size: 16px;
@@ -26,51 +22,54 @@ html {
  p {
      margin: 0;
      padding: 0;
-     font-family: arial;
+     font-family: var(--p-font);
      line-height: 2;
-	 color: var(--dark);
+     color: var(--dark);
 }
  a {
      text-decoration: none;
-	 color: var(--dark);
+     color: var(--dark);
+	 
+	 margin: 0;
+	 padding: 0;
+}
+.skip-link {
+	display: none;
 }
 /* HEADER */
  .main-header {
      padding: 10px 0 5px;
-     background-color: var(--dark);
      width: 100%;
-     height: auto;
-     display: block;
-     align-items: center;
-	 
 }
-
  .logo {
-     height: 40px;
      fill: var(--white);
+	 width: 80%;
+	 margin: 10px auto;
+	 display: block;
+  
 }
-.logo:hover {
-	cursor: pointer;
-	opacity: 0.7;
+ .logo:hover {
+     cursor: pointer;
+     opacity: 0.7;
 }
 /* NAVIGATION */
  .navigation-ul {
      width: 100%;
      margin: 0;
-     padding: 1px 0;
+     padding: 0;
      align-items: center;
      list-style-type: none;
      display: flex;
      justify-content: space-around;
-     background-color: var(--dark);
      text-transform: uppercase;
+	 
 }
  .navigation-li {
      text-align: center;
      font-weight: 500;
      font-family: var(--h-font);
      font-size: 1em;
-     padding: 0 5px;
+     padding: 8px 2px 5px;
 }
  .navigation-li a {
      color: var(--white);
@@ -88,10 +87,10 @@ html {
 }
 /* HOMEPAGE */
  .homepage-parent {
-	 padding: 0;
-	 margin: 10px 0 0;
-	 max-width: 100%;
-	 overflow: hidden;
+     padding: 0;
+     margin: 10px 0 0;
+     max-width: 100%;
+     overflow: hidden;
 }
  .homepage-child {
      text-align: center;
@@ -104,7 +103,8 @@ html {
  .homepage-heading {
      display: flex;
      align-items: center;
-     background-color: #D3D5D4;
+	 background: radial-gradient(#fbfbfb, #D3D5D4);
+	 
 }
  .homepage-headline {
      padding: 0 5px;
@@ -114,53 +114,53 @@ html {
      font-family: 'Fjalla One', sans-serif;
      text-transform: uppercase;
      color: var(--dark);
+	 
 }
 /* ARTICLES */
  .article-parent {
-   	max-width: 960px;
+     max-width: 960px;
      display: block;
-	 padding: 10px;
-	 margin: auto;
+     padding: 10px;
+     margin: auto;
 }
  .article-headline {
-   	font-family: var(--h-font);
-	 font-weight: 400;
+     font-family: var(--h-font);
+     font-weight: 400;
      text-transform: uppercase;
      margin: 10px 0 0 10px;
-	 padding: 5px 10px;
-	 font-size: 2em;
-	 line-height: 1.3;
-	 color: var(--dark);
+     padding: 5px 10px;
+     font-size: 2em;
+     line-height: 1.3;
+     color: var(--dark);
 }
  .article-parent p {
-	 margin-bottom: 30px;
-	 padding: 0 20px;
+     margin-bottom: 30px;
+     padding: 0 20px;
 }
  .article-parent p:nth-of-type(1) {
-	 font-weight: bold;
-	 margin: 10px 0 20px 0;
+     font-weight: bold;
+     margin: 10px 0 20px 0;
 }
-.album-review-child:nth-of-type(2) p:nth-of-type(1) {
-	font-weight: bold;
+ .album-review-child:nth-of-type(2) p:nth-of-type(1) {
+     font-weight: bold;
 }
-	 .album-review-child p {
-		 margin: 20px 25px;
-	 }
-.article-parent p:nth-of-type(2)::first-letter {
-	
+ .album-review-child p {
+     margin: 20px 25px;
+}
+ .article-parent p:nth-of-type(2)::first-letter {
 }
  .leading-img {
      min-height: 200px;
      display: flex;
      align-items: center;
-	 text-align: center;
-	 width: auto;
-	 margin: 10px 20px
+     text-align: center;
+     width: auto;
+     margin: 10px 20px 
 }
-.youtube {
-	margin: auto;
-	display: block;
-	margin-bottom: 30px;
+ .youtube {
+     margin: auto;
+     display: block;
+     margin-bottom: 30px;
 }
 /* MOBILE ALBUM PAGES */
  .albums-parent {
@@ -187,39 +187,36 @@ html {
      font-size: 18px;
      padding: 0;
      margin: 0;
-	 font-family: var(--h-font);
-	 text-transform: uppercase;
-	 color: var(--dark);
-		font-weight: 600;
+     font-family: var(--h-font);
+     text-transform: uppercase;
+     color: var(--dark);
+     font-weight: 600;
 }
  .album-title {
      margin: 0;
      padding: 7px 0;
      font-size: 16px;
-	 font-family: var(--h-font);
-	 text-transform: uppercase;
-	  color: var(--dark);
-	 font-weight: 500;
+     font-family: var(--h-font);
+     text-transform: uppercase;
+     color: var(--dark);
+     font-weight: 500;
 }
  .rating {
      margin-top: 7px;
 }
-.album-review-child:nth-of-type(1) {
-	text-align: center;
-	margin-top: 50px;
+ .album-review-child:nth-of-type(1) {
+     text-align: center;
+     margin-top: 50px;
 }
-
-.advert {
-	margin: auto;
-	width: 300px;
-	height: 250px;
-	background-color: var(--grey);
+ .advert {
+     margin: auto;
+     width: 300px;
+     height: 250px;
+     background-color: var(--grey);
 }
-
-
 /* HOMEPAGE IMAGES */
  .one {
-     background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(../img/alice-jemimia.jpg);
+     background: radial-gradient( rgba(221, 10, 127, 0.7), rgba(144, 37, 120, 0.7)), url(../img/alice-jemimia.jpg);
      background-position: center;
      background-size: cover;
 }
@@ -248,53 +245,54 @@ html {
      background-position: center;
      background-size: cover;
 }
-.seven {
+ .seven {
      background: radial-gradient( rgba(221, 10, 127, 0.6), rgba(144, 37, 120, 0.7)), url(../img/the-dammed.jpg);
      background-position: center;
      background-size: cover;
 }
 /* FOOTER */
  .main-footer {
-     background-color: var(--dark);
-	 margin: 0 auto;
-	display: block;
-	 color: v:  :ar(--white);
-	 max-width: 960px;
-	 text-align: left;
-	 text-align: center;
-	 
+	 padding-bottom: 40px;
+     margin: 0 auto;
+     display: block;
+     color: var(--white);
+     max-width: 960px;
+     text-align: left;
+     text-align: center;
+	 overflow: hidden;
 }
-.footer-child {
-padding: 10px 20px;
+ .footer-child {
+     padding: 10px 0px;
 }
-.footer-child:nth-child(1) {
-text-align: left;
+ .footer-child:nth-child(1) {
+     text-align: left;
 }
  .main-footer p {
-	 color: var(--white);
-	 font-family: var(--h-font);
-	 font-size: 1em;
-	 line-height: 1.5;
-	 font-weight:  300;
-	 
+     color: var(--white);
+     font-family: var(--h-font);
+     font-size: 1.em;
+     line-height: 1.5;
+     font-weight: 300;
+	 max-width: 300px;
+	 margin: auto;
 }
-.main-footer h3 {
-	font-family: var(--h-font);
-	 color: var(--white);
-	text-transform: uppercase;
-	margin: 10px 0 5px;
-	font-weight:  400;
+ .main-footer h3 {
+     font-family: var(--h-font);
+     color: var(--white);
+     text-transform: uppercase;
+     margin: 5px 0 2px;
+     font-weight: 400;
 }
  .icon {
-     max-width: 70px;
-     margin: auto;
+     max-width: 90px;
+     margin: 10px auto 0;
      display: block;
-     background-color: var(--dark);
+     background-color: var(--white);
      border-radius: 250px;
-	 fill: var(--white)
+     fill: var(--white);
 }
  @media only screen and (min-width: 700px) {
-	 /* DESKTOP HEADER */
+    /* DESKTOP HEADER */
      .main-header {
          display: flex;
          margin: 0 auto;
@@ -303,26 +301,20 @@ text-align: left;
          justify-content: space-between;
          height: 60px;
     }
-     .logo {
-         margin: 0;
-         padding-left: 10px;
-         width: auto;
-    }
-	 
      .homepage-headline {
          margin: auto;
          font-size: 1.2em;
     }
-	 /* DESKTOP NAVIGATION */
+    /* DESKTOP NAVIGATION */
      .navigation-ul {
-         margin: 0;
+         margin-right: 5px;
          width: 100%;
+		 font-size: 1em;
     }
      .navigation-li {
-         margin: 5px 10px 5px 20px;
+         margin: 0 5px;
     }
-	 /* DESKTOP LAYOUT */
-   
+    /* DESKTOP LAYOUT */
      .homepage-parent {
          padding: 0;
          overflow: hidden;
@@ -332,7 +324,7 @@ text-align: left;
          grid-column-gap: 15px;
          grid-row-gap: 15px;
          max-width: 960px;
-         margin: 15px auto;
+         margin: 20px auto;
     }
      .homepage-child {
          padding: 0;
@@ -363,39 +355,60 @@ text-align: left;
          grid-column: 2/4;
          grid-row: 4;
     }
-	 .homepage-child:nth-child(7) {
+     .homepage-child:nth-child(7) {
          grid-column: 1/4;
          grid-row: 5;
     }
-	   .homepage-heading {
+     .homepage-heading {
          min-height: 55px;
     }
-	  /* DESKTOP ALBUMS */
+    /* DESKTOP ALBUMS */
      .albums-parent {
-         grid-template-columns: 1fr 1fr 1fr ;
+		 max-width: 960px;
+         grid-template-columns: 1fr 1fr 1fr;
+		 margin: 35px auto 100px;
     }
-	 .album-review-parent {
-		display: grid;
-		 grid-template-columns: 1fr 2fr;
-		  max-width: 960px;
-		 margin: auto;
-}
-	 .album-review-child p:nth-of-type(1)  {
-		 margin-top: 50px;
-	 } 
-	 .album-review-child:nth-of-type(2)  {
-		 max-width: 620px;
+     .album-review-parent {
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         max-width: 960px;
+         margin: auto;
+    }
+     .album-review-child p:nth-of-type(1) {
+         margin-top: 50px;
+    }
+     .album-review-child:nth-of-type(2) {
+         max-width: 620px;
+    }
+     .article-parent {
+         display: grid;
+         grid-template-columns: 2fr 1fr;
+    }
+     .advert {
+         margin: 10px 15px 10px 10px;
+    }
+     .main-footer {
+         display: grid;
+         grid-template-columns: 1fr 2fr 1fr;
+		 text-align: left;
+    }
+	  .main-footer p {
+		  margin: 0;
+		  max-width: 90%;
+	 }
+	 .icon {
+		 fill: var(--white);
+		 margin: 0;
+		 float: right;
+		 margin: 10px 20px 0 0;
+		
+	 }
+	 .logo {
+		 width: 90%;
+		 max-height: 40px;
+		 margin-left: 10px;;
 		 
 	 }
-	 .article-parent {
-	 	display: grid;
-	 	grid-template-columns: 2fr 1fr;
-	 }
-	 .advert {
-		margin: 10px 15px 10px 10px;
-	 }
-	  .main-footer {
-	 display: grid;
-	 grid-template-columns: 2fr 1fr;
+
 }
-}
+ 
